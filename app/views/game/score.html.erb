@@ -5,10 +5,10 @@
       <p>Your word: <strong><%= @attempt %></strong></p>
       <p>Time Taken to answer: <strong><%= @result[:time] %></strong></p>
       <p>Translation: <strong><%= @result[:translation] %></strong></p>
-      <p>You gain score: <strong><%= @result[:score] %></strong></p>
+      <p>This game score: <strong><%= @result[:score] %></strong></p>
       <p>Your total score: <strong><%= session[:score] %></strong></p>
       <p>Message: <strong><%= @result[:message] %></strong></p>
-      <h3><%= link_to "Try again!", root_path %></h3>
+      <h3><%= link_to "Play one more time!", root_path %></h3>
       <!-- <%= session.inspect %> -->
     </div>
   </div>
