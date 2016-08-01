@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   get 'game/game'
 
-  get '/score' => "game#score"
+  post '/score' => "game#score"
+
+  get '/score' => "game#game"
+
+  get '/destroy' => "game#destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

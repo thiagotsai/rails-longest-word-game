@@ -15,8 +15,8 @@ def included?(guess, grid)
 end
 
 def compute_score(attempt, time_taken)
-  puts "attempt size: #{attempt.size}"
-  puts "bonus: #{(1.0 - time_taken / 60.0)}"
+  print "attempt size: #{attempt.size}"
+  print "bonus: #{(1.0 - time_taken / 60.0)}"
   (time_taken > 60.0) ? 0 : attempt.size * (1.0 - time_taken / 60.0)
 end
 
