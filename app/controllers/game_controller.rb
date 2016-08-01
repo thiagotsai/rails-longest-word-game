@@ -8,15 +8,11 @@ class GameController < ApplicationController
   def score
     @attempt = params[:attempt]
     @grid = params[:grid].split("")
-    # @start_time = Time.new(params[:start_time])
     @start_time = Time.parse(params[:start_time])
     @end_time = Time.now
     @result = run_game(@attempt, @grid, @start_time, @end_time)
-    if session[:score].nil?
-      session[:score] = @result[:score][0]
-    else
-      session[:score] += @result[:score]
-    end
+
+    session[:score] += @result[:score]
   end
 
   def destroy
